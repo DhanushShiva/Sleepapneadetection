@@ -1,0 +1,56 @@
+{% extends 'main2.html' %}
+{% block content %}
+<style>
+  table, th, td {
+    border:1px solid black;
+    padding: 5px 15px;
+  }
+          .container{
+              background-color:white;
+              padding: 25px;
+              }
+          .block{
+              color:blue;
+              }
+          .head{
+              font-size:50px;
+              color:#03fcdb;
+              text-align:center;
+              }
+          body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+          }
+  </style>
+<!-- <body> -->
+  <div class="container">
+<h2>CKD prediction</h2>
+
+<table class="table">
+  <tr>
+    <th>stage 4</th>
+    <th>Suggestion</th>
+    <th>Diet plan</th>
+  </tr>
+  <tr>
+    <td><p>Stage 4 means you have moderate-to-severe Sleep Apnea. They’re functioning between 15 and 29 percent, so you may be building up more waste, toxins, and fluids in your body.</p></td>
+    <td><p>In stage 4, you’ll need to work very closely with your doctors. In addition to the same treatment as earlier stages, you should start discussions about dialysis and Sleep Apnea  </p></td>
+             <td><p>prioritize fresh foods over processed products.
+            have smaller portions of meat, poultry, and fish.
+            involve moderate to no alcohol consumption.
+            limit cholesterol, saturated fats, and refined sugars.
+            avoid salt.
+       </p></td>
+  </tr>
+<!--  <tr>-->
+<!--    <td>16</td>-->
+<!--    <td>14</td>-->
+<!--    <td>10</td>-->
+<!--  </tr>-->
+</table>
+
+<!--<p>To understand the example better, we have added borders to the table.</p>-->
+</div>
+{% endblock %}
+

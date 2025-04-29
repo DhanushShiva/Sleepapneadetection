@@ -1,0 +1,56 @@
+{% extends 'main2.html' %}
+{% block content %}
+<style>
+  table, th, td {
+    border:1px solid black;
+    padding: 5px 15px;
+  }
+          .container{
+              background-color:white;
+              padding: 25px;
+              }
+          .block{
+              color:blue;
+              }
+          .head{
+              font-size:50px;
+              color:#03fcdb;
+              text-align:center;
+              }
+          body {
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+          }
+  </style>
+<body style="background-image: url('static/login.png'); background-size: 100% 100vh; background-repeat: no-repeat; ">
+
+  <div class="container">
+<h2>Sleep Apnea prediction</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Severe Apnea</th>
+    <th>Suggestion</th>
+    <th>Diet plan</th>
+  </tr>
+  <tr>
+    <td><p>Severe Apnea means your Apnea is functioning between 45 and 59 percent</p>
+        </td>
+    <td><p>It’s important to manage underlying conditions to help preserve  Sleep Apnea. This may include:high blood pressure medications such as angiotensin-converting enzyme (ACE) inhibitors or angiotensin II receptor blockers diuretics and a low salt diet to relieve fluid retention cholesterol-lowering medications erythropoietin supplements for anemia vitamin D supplements to address weakening bones phosphate binders to prevent calcification in the blood vessels following a lower protein diet so your Sleep Apnea don’t have to work as hard</p></td>
+    <td><p>
+             Recommends a high- or low- protein diet, it’s important to make sure your protein intake comes from high-quality sources such as egg whites, fish, poultry, meat, soy and small of amounts of dairy.
+         </p></td>
+  </tr>
+<!--  <tr>-->
+<!--    <td>16</td>-->
+<!--    <td>14</td>-->
+<!--    <td>10</td>-->
+<!--  </tr>-->
+</table>
+
+<!--<p>To undestand the example better, we have added borders to the table.</p>-->
+  </div>
+  {% endblock %}
+

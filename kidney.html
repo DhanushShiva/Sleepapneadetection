@@ -1,0 +1,165 @@
+{% extends 'main2.html' %}
+{% block content %}
+<style>
+    thead,tbody{
+        color: rgb(255, 0, 0);
+        font-size: x-large;
+    }
+    h1{
+        color: rgb(255, 0, 0);
+    }
+</style>
+<div class="row"  style="margin-bottom: 50px; background-image: url('static/page.jpeg'); background-size: 100% 100vh; background-repeat: no-repeat ;">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <center><h1>Sleep Apnea Predictor</h1></center> <br>
+        <div class="card card-body" style="border: 1px solid black;">
+            <form class="form-horizontal" action="{{ url_for('predictPage') }}" method="POST">
+                
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="Name" placeholder="Enter Name" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="text" name="BQ" placeholder="BQ (0-1)" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="ESS" placeholder="ESS (0-50)" required step="any">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="BMI" placeholder="BMI (14-60)" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Weight" placeholder="Weight (37-160)" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Height" placeholder="Height (140-198)" required step="any">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Head" placeholder="Head (47-66)" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Neck" placeholder="Neck (26-57)" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Waist" placeholder="Waist (56-160)" required step="any">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Buttock" placeholder="Buttock (70-150)" required step="any">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Age" placeholder="Age (20-80)" required step="any">
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="Gender" placeholder="Gender M=1 F=0" required step="any">
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="ca" placeholder="ca" required step="any">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input style="border: 1px solid black;" class="form-control" type="number" name="thal" placeholder="thal" required step="any">
+                        </div>
+                    </div>
+                </div> -->
+                
+                <input type="submit" class="btn btn-info btn-block" value="Predict" required step="any">
+            </form>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div> 
+<div class="container">
+
+<!-- <h1 style="text-align: center"> Sample-Inputs in the Data Set</h1> <br> -->
+<br>  <br>  <br> <br>  <br>  <br>  <br>  <br>  <br>  <br>  <br> 
+<!-- <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">age</th>
+      <th scope="col">bp</th>
+      <th scope="col">al</th>
+      <th scope="col">sg</th>
+      <th scope="col">sc</th>
+      <th scope="col">sod</th>
+      <th scope="col">hemo</th>
+      <th scope="col">appet</th>
+      <th scope="col">sod</th>
+      <th scope="col">hemo</th>
+      <th scope="col">appet</th>
+      <th scope="col">Disease</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      
+      <td>33</td>
+      <td>80</td>
+      <td>0</td>
+      <td>1.025</td>
+      <td>1.1</td>
+      <td>144</td>
+      <td>15</td>
+      <td>1</td>
+      <td>144</td>
+      <td>15</td>
+      <td>1</td>
+      <td>HEALTHY</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>70</td>
+      <td>4</td>
+      <td>1.005</td>
+      <td>3.8</td>
+      <td>111</td>
+      <td>11.2</td>
+      <td>0</td>
+      <td>CKD</td>
+    </tr>
+  </tbody>
+</table> -->
+<br><br>
+
+</div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'main2.html' %}
+{% block content %}
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            {% if pred == 1 or pred ==2 or pred ==3 %}
+                <div class="jumbotron ">
+  <h1 class="display-4">{{ name }} , You have  {{res}} !</h1>
+  <p class="lead">Please Consult the Doctor Immediately. It was too risky without consultation. Make sure of health in your diet.</p>
+  <hr class="my-4">
+  <p>Proper Doctor Consultation Needed.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.who.int/" role="button">Learn more</a>
+  </p>
+  {% if pred==1 %}
+  <p>Detected {{res}}</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/stage1" role="button">Check diet</a>
+  </p>
+  {% endif %}
+  {% if pred==2 %}
+  <p>Detected {{res}}</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/stage2" role="button">Check diet</a>
+  </p>
+  {% endif %}
+  {% if pred==3 %}
+  <p>Detected {{res}}</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/stage3" role="button">Check diet</a>
+  </p>
+  {% endif %}
+
+
+</div>
+            {%  else %}
+                <div class="jumbotron">
+  <h1 class="display-4">Great! {{ name }} , You are Healthy</h1>
+  <p class="lead">You are Absolutely Alright ! There is no Marks for Sleep Apnea. Enjoy life with full of Happiness.</p>
+  <hr class="my-4">
+  <p>Be careful at your health. Nothing is important than your health.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="https://www.who.int/" target="_blank" role="button">Learn more</a>
+  </p>
+</div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('Apnea') }}" class="btn btn-block btn-primary">Recheck</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'main2.html' %}
+{% block content %}
+<style>
+  table, th, td {
+    border:1px solid black;
+    padding: 5px 15px;
+  }
+          .container{
+              background-color:white;
+              padding: 25px;
+              }
+          .block{
+              color:blue;
+              }
+          .head{
+              font-size:50px;
+              color:#03fcdb;
+              text-align:center;
+              }
+          body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+          }
+  </style>
+
+  <div class="container">
+<h2>Sleep Apnea prediction</h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Moderate Apnea</th>
+    <th>Suggestion</th>
+    <th>Diet plan</th>
+  </tr>
+  <tr>
+    <td><p>In Moderate Apnea, Sleep Apnea are functioning between 60 and 89 percent.</p></td>
+    <td><p>It’s time to develop a relationship with an Apnea specialist. There’s no cure for CKD, but early treatment can slow or stop progression.It’s important to address the underlying cause. If you have diabetes, high blood pressure, or Sleep Apnea, follow your doctor’s instructions for managing these conditions.It’s also important to maintain a good diet, get regular exercise, and manage your weight. If you smoke, ask your doctor about smoking cessation programs.</p>
+     <td><p>
+             Add more fiber from fresh fruits and vegetables, and whole-grains, such as whole grain bread and high-fiber cereal. Limit high-fat dairy, including milk, yogurt, frozen desserts, cream cheese and sour cream.
+        </p></td>
+  </tr>
+<!--  <tr>-->
+<!--    <td>16</td>-->
+<!--    <td>14</td>-->
+<!--    <td>10</td>-->
+<!--  </tr>-->
+</table>
+</div>
+{% endblock %}
+
